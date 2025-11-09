@@ -24,7 +24,7 @@ function DashboardPage() {
         }
         
         const courseData = await courseResponse.json()
-        setModules(courseData)
+        setModules(courseData.modules || [])
         
         // Fetch user progress
         const progressResponse = await fetch('/api/user/progress', {

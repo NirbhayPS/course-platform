@@ -30,7 +30,9 @@ function ModulePage() {
         const courseData = await courseResponse.json()
         
         // Find the specific module
-        const foundModule = courseData.find(m => m.id === parseInt(moduleId))
+        console.log('courseData', courseData);
+        
+        const foundModule = courseData?.modules?.find(m => m.id === parseInt(moduleId))
         
         if (!foundModule) {
           throw new Error('Module not found')
