@@ -85,6 +85,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/course', courseRoutes);
 app.use('/api/quiz', quizRoutes);
 app.use('/api/progress', progressRoutes);
+app.use('/api/user', progressRoutes);
 app.use('/api/project', projectRoutes);
 
 // Placeholder for future routes
